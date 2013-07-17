@@ -9,4 +9,6 @@
 
 def ten_twenty(n)
   # your code goes here
+  return 10 if n.even?
+  return 20 if n.odd?
 end

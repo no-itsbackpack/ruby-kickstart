@@ -8,4 +8,16 @@
 # odds_and_evens("abcdefg",false)   # => "aceg"
 
 def odds_and_evens(string, return_odds)
+ str_len= string.length
+ odds=''
+  if return_odds
+    (0..(str_len-1)).each do |index|
+      odds << string[index] if index.odd?
+    end
+  else
+    (0..(str_len-1)).each do |index|
+      odds << string[index] if index.even?
+    end
+  end
+  return odds
 end

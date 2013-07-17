@@ -9,4 +9,14 @@
 
 def sum_difference_product
   # your code goes here
+  line = gets
+  line.strip!
+  int = line.split(' ')
+  x = int[0].to_i
+  y = int[1].to_i
+  sum = x + y
+  product = x * y
+  difference = x - y
+
+  puts "#{sum}\\n#{difference}\\n#{'product'}"
 end

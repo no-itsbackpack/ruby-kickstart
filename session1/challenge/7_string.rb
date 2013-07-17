@@ -5,4 +5,13 @@
 # pirates_say_arrrrrrrrr("Pirates say arrrrrrrrr")        # => "arrrrrrrr"
 
 def pirates_say_arrrrrrrrr(string)
+  pirate = string.split('')
+  pirate.delete(' ')
+  arr=''
+  pirate.each_with_index do |str,index|
+    if ['r','R'].include?(str)
+      arr << pirate[index.next] if pirate[index.next] != nil
+    end
+  end
+  return arr
 end
